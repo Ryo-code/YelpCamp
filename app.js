@@ -54,6 +54,6 @@ app.use(indexRoutes);
 app.use("/campgrounds", campgroundRoutes); //All the campgrounds routes start this way, so in routes/campgrounds.js, you don't need to write that anymore (just what comes after that)
 app.use("/campgrounds/:id/comments", commentRoutes); //Same thing for comments... this just keeps the code DRY
 
-app.listen(3000, () => {
+app.listen(process.env.PORT || 3000, () => {
   console.log('The YelpCamp Server has started (on port 3000)!')
 })
